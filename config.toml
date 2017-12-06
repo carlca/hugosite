@@ -1,5 +1,4 @@
 baseurl = "https://relaxed-williams-d8a311.netlify.com/"
-# baseurl = "https://github.com/carlca/hugosite/"
 languageCode = "en-us"
 title = "icarus"
 # Enable comments by entering your Disqus shortname
