@@ -49,17 +49,17 @@ theme = "hugo-icarus-theme"
 # and "Tags" / "Categories" after them.
 [[params.menu]]
     before = true
-    label  = "Home"
+    label  = "home"
     link   = "/"
 
 [[params.menu]]
     before = false
-    label  = "Tags"
+    label  = "tags"
     link   = "tags/"
 
 [[params.menu]]
     before = false
-    label  = "Categories"
+    label  = "categories"
     link   = "categories/"
 
 # Enter a link for the follow button on the left
