@@ -23,7 +23,7 @@ theme = "hugo-icarus-theme"
     bio = "musician / gopher"
     location = "london, england"
     site_description = ""
-    copyright  = "Powered by [hugo](//gohugo.io). Theme by [icarus](https://github.com/digitalcraftsman/hugo-icarus-theme)"
+    copyright  = "powered by [hugo](//gohugo.io) + theme by [icarus](https://github.com/digitalcraftsman/hugo-icarus-theme)"
     avatar = "images/homer.png"
     # Enter your email address to display your Gravatar icon in the profile. If not set the theme
     # will fallback to the avatar.
