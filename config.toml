@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Icarus"
+title = "icarus"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
 # Enable Google Analytics by entering your tracking code
@@ -71,7 +71,7 @@ theme = "hugo-icarus-theme"
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.
-    github          = "digitalcraftsman"
+    github          = "carlca"
     gitlab          = ""
     bitbucket       = ""
     jsfiddle        = ""
@@ -98,7 +98,8 @@ theme = "hugo-icarus-theme"
     facebook        = ""
     facebook_admin  = ""
     twitter_domain  = ""
-    twitter         = "spf13"
+    twitter         = "carlcaulkett"
+    soundcloud      = "carl-caulkett"
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
