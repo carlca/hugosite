@@ -1,0 +1,37 @@
+# baseURL = "github.com/carlca/hugosite"
+baseURL = "/"
+languageCode = "en-us"
+title = "carlca.com - music + tech"
+disqusShortname = "carlca.com"
+theme = "kiss"
+copyright = '&copy; <a href=\"https://github.com/carlca\">Carl Caulkett</a> 2017</div>'
+Paginate = 5
+enableRobotsTXT = true
+
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
+
+[params.opengraph.twitter]
+page = "" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+
+twitter = "carlcaulkett"
+github = "carlca"
+email = "carl.caulkett@gmail.com"
+instagram = ""
+codepen = ""
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = true
