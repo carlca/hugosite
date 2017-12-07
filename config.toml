@@ -12,16 +12,14 @@ theme = "hugo-icarus-theme"
 # Comment the themesDir option if you use this theme in production
 # themesDir = "../.."
 
-
 [permalinks]
     post = "/:day/:month/:year/:slug"
-
 
 [params]
     # Tell me who you are
     author = "carl caulkett"
     bio = "musician / gopher"
-    location = "london, england"
+    location = "london, england, europe"
     site_description = ""
     copyright  = "powered by [hugo](//gohugo.io) + theme by [icarus](https://github.com/digitalcraftsman/hugo-icarus-theme)"
     avatar = "images/homer.png"
