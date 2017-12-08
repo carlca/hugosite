@@ -28,9 +28,9 @@ Follow these steps:
 
 * Create a default `.gitignore` and place it in `~`
 * touch `/usr/local/bin/gitnew.sh`
-* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` to contain...
+* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` 
 
-###### .
+###### to contain...
     #!/usr/bin/env bash 
     folder=${PWD##*/}
     rm -rf README.md 
