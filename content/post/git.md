@@ -30,7 +30,7 @@ Follow these steps:
 * touch `/usr/local/bin/gitnew.sh`
 * [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` to contain...
 
-######
+###### .
     #!/usr/bin/env bash 
     folder=${PWD##*/}
     rm -rf README.md 
