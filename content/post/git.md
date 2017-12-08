@@ -1,6 +1,14 @@
-+++ banner = "" categories = [] date = "2017-12-08T12:18:17Z" description = ""
-images = [] menu = "" tags = ["git"] title = "Git - some sanity preserving tips
-on Linus' monstrous creation" +++
+---
+banner: "" 
+categories: [] 
+date: = "2017-12-08T12:18:17Z" description = ""
+draft: false
+images: [] 
+menu: "" 
+tags: ["git"] 
+title: "Git - some sanity preserving tips
+on Linus' monstrous creation"
+---
 
 # Git
 
