@@ -1,7 +1,14 @@
-+++ banner = "" categories = [] date = "2017-05-20T12:10:51+02:00" description =
-""
-
-images = [] menu = "" tags = ["markdown"] title = "Markdown Cheat Sheet" +++
+---
+banner: "" 
+categories: [] 
+date: "2017-12-08T12:18:17Z" 
+description: ""
+draft: false
+images: [] 
+menu: "" 
+tags: ["git"] 
+title: "Markdown"
+---
 
 This note demonstrates some of what [Markdown][1] is capable of doing.
 
