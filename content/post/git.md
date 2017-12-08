@@ -1,6 +1,8 @@
-# Git
++++ banner = "" categories = [] date = "2017-12-08T12:18:17Z" description = ""
+images = [] menu = "" tags = ["git"] title = "Git - some sanity preserving tips
+on Linus' monstrous creation" +++
 
-Some sanity preserving tips on Linus' monstrous creation
+# Git
 
 There's no two ways about it, Git, to some of us at least, is a struggle. It
 seems to fail the oft overlooked
