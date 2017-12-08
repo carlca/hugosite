@@ -1,7 +1,8 @@
 ---
 banner: "" 
 categories: [] 
-date: = "2017-12-08T12:18:17Z" description = ""
+date: "2017-12-08T12:18:17Z" 
+description: ""
 draft: false
 images: [] 
 menu: "" 
