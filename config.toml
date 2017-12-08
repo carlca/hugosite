@@ -1,4 +1,5 @@
-baseurl = "https://carlca.com/"
+# baseurl = "https://carlca.com/"
+baseurl = "/"
 languageCode = "en-us"
 title = "icarus"
 # Enable comments by entering your Disqus shortname
