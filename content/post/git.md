@@ -26,18 +26,19 @@ scripts to make the job ridiculously easy.
 
 Follow these steps:
 
-* `touch /usr/local/bin/gitnew.sh`
-* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` to
-  contain...
+* touch `/usr/local/bin/gitnew.sh`
+* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` to contain...
 
-  #!/usr/bin/env bash folder=${PWD##\*/}\
-  rm -rf README.md echo "# $folder" >> README.md 
-  cp ~/code/go/src/github.com/carlca/.gitignore . 
+  #!/usr/bin/env bash 
+  folder=${PWD##*/}
+  rm -rf README.md 
+  echo "# $folder" >> README.md 
+  cp ~/.gitignore . 
   git init 
   git add README.md 
   git commit -m "first commit" 
   git remote add origin https://github.com/carlca/$folder.git 
-  git push -u origin master%
+  git push -u origin master
 
 * Optionallly, create an alias simply called gitnew by putting `alias
   gitnew='gitnew.sh'` in your shell config file
