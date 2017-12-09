@@ -92,6 +92,8 @@ Follow these steps:
 * Make your code changes or create new files/folders using your favorite [editor](https://code.visualstudio.com/)
 * Type `gitadd "<commit message>"` or `gitadd "<commit message>"` ⏎ depending on whether you created an alias.
 
+#### Summary
+
 This makes the basic workflow for Git very easy...
 
 * Create Git repository at https://github.com
