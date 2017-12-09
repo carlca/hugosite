@@ -24,7 +24,7 @@ seems to fail the oft overlooked
 more often than is strictly necessary. So, with this in mind, here are some
 common head scratchers and the best solutions I have found so far.
 
-[gitnew]:
+{{< relref "#gitnew" >}}
 #### How to create a script to make a new Git repository
 
 These instructions have been revised now that I have worked out how to use shell
@@ -72,7 +72,7 @@ Before using the script, it is assumed that you have created a new working folde
 * Create the repository in Github, but do not do any of the follow up steps described on https://github.com/new. They are all done by the shell script.
 * `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on whether you created an alias.
 
-[gitadd]: 
+{{< relref "#gitadd" >}} 
 #### How to create a script to update an existing Git repository
 
 Follow these steps:
