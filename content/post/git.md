@@ -11,6 +11,11 @@ tags: ["git"]
 title: "Git"
 ---
 
+#### Index
+
+* [How to create a script to make a new Git repository][GitNew]
+* [How to create a script to update an existing Git repository][GitAdd]
+
 #### Some sanity preserving tips on Linus' monstrous creation
 
 There's no two ways about it, Git, to some of us at least, is a struggle. It
