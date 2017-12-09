@@ -90,7 +90,7 @@ Follow these steps:
 #### How to use the script
 
 * Make your code changes or create new files/folders using your favorite [editor](https://code.visualstudio.com/)
-* Type `gitadd` or `gitadd` ⏎ depending on whether you created an alias.
+* Type `gitadd "<commit message>"` or `gitadd "<commit message>"` ⏎ depending on whether you created an alias.
 
 This makes the basic workflow for Git very easy...
 
