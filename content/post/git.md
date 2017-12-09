@@ -31,6 +31,7 @@ scripts to make the job ridiculously easy.
 
 Follow these steps:
 
+* Create a default `.gitignore` file and place it in `~`
 * `touch /usr/local/bin/gitnew.sh`
 * [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` 
 
