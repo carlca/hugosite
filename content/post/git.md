@@ -13,8 +13,9 @@ title: "Git"
 
 #### Index
 
-* [How to create a script to make a new Git repository]({{<ref "#gitnew" >}}) 
-* [How to create a script to update an existing Git repository]({{<ref "#gitadd" >}}) 
+* [How to create a script to make a new Git repository]({{<ref "#gitnew" >}})
+* [How to create a script to update an existing Git repository]({{<ref
+  "#gitadd" >}})
 
 #### Some sanity preserving tips on Linus' monstrous creation
 
@@ -24,7 +25,9 @@ seems to fail the oft overlooked
 more often than is strictly necessary. So, with this in mind, here are some
 common head scratchers and the best solutions I have found so far.
 
-#### <a name="gitnew"></a>How to create a script to make a new Git repository
+#### <a name="gitnew">
+
+</a>How to create a script to make a new Git repository
 
 These instructions have been revised now that I have worked out how to use shell
 scripts to make the job ridiculously easy.
@@ -33,30 +36,32 @@ Follow these steps:
 
 * Create a default `.gitignore` file and place it in `~`
 * `touch /usr/local/bin/gitnew.sh`
-* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` 
+* `chmod 755 /usr/local/bin/gitnew.sh`
+* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh`
 
 ##### to contain...
-    #!/usr/bin/env bash 
+
+    #!/usr/bin/env bash
 
     # get the CWD and put it in $folder
-    folder=${PWD##*/}           
+    folder=${PWD##*/}
 
-    rm -rf README.md 
+    rm -rf README.md
 
     # create new README.md
-    echo "# $folder" >> README.md   
-    
+    echo "# $folder" >> README.md
+
     # copy default .gitignore file from ~
-    cp ~/.gitignore .               
+    cp ~/.gitignore .
 
     # instructions as per https://github.com/new
-    git init 
-    git add README.md 
-    git commit -m "first commit" 
+    git init
+    git add README.md
+    git commit -m "first commit"
 
     # this command has been tweaked to make it entirely portable
     gitname=`git config user.name`
-    git remote add origin https://github.com/$gitname/$folder.git 
+    git remote add origin https://github.com/$gitname/$folder.git
 
     # the final push!
     git push -u origin master
@@ -66,19 +71,27 @@ Follow these steps:
 
 #### How to use the script
 
-Before using the script, it is assumed that you have created a new working folder for your source code and that your Github repository will have the same name.
+Before using the script, it is assumed that you have created a new working
+folder for your source code and that your Github repository will have the same
+name.
 
-* Create the repository in Github, but do not do any of the follow up steps described on https://github.com/new. They are all done by the shell script.
-* `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on whether you created an alias.
+* Create the repository in Github, but do not do any of the follow up steps
+  described on https://github.com/new. They are all done by the shell script.
+* `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on
+  whether you created an alias.
 
-#### <a name="gitadd"></a>How to create a script to update an existing Git repository
+#### <a name="gitadd">
+
+</a>How to create a script to update an existing Git repository
 
 Follow these steps:
 
 * `touch /usr/local/bin/gitadd.sh`
-* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitadd.sh` 
+* `chmod 755 /usr/local/bin/gitadd.sh`
+* [edit](https://code.visualstudio.com/) `/usr/local/bin/gitadd.sh`
 
 ##### to contain...
+
     #!/usr/bin/env bash
 
     # update/add files recursively
@@ -95,8 +108,10 @@ Follow these steps:
 
 #### How to use the script
 
-* Make your code changes or create new files/folders using your favorite [editor](https://code.visualstudio.com/)
-* Type `gitadd "<commit message>"` or `gitadd "<commit message>"` ⏎ depending on whether you created an alias.
+* Make your code changes or create new files/folders using your favorite
+  [editor](https://code.visualstudio.com/)
+* Type `gitadd "<commit message>"` or `gitadd.sh "<commit message>"` ⏎ depending
+  on whether you created an alias.
 
 #### Summary
 
@@ -106,4 +121,3 @@ This makes the basic workflow for Git very easy...
 * Type `gitnew` or `gitnew.sh` ⏎
 * Make code changes or create new files/folders
 * Type `gitadd "<commit message>"` or `gitadd.sh "<commit message>"` ⏎
-
