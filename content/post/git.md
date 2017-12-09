@@ -33,7 +33,7 @@ Follow these steps:
     #!/usr/bin/env bash 
 
     # get the CWD and put it in $folder
-    folder=${PWD##\*/}\             
+    folder=${PWD##*/}           
 
     rm -rf README.md 
 
