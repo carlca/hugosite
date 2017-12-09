@@ -19,7 +19,7 @@ seems to fail the oft overlooked
 more often than is strictly necessary. So, with this in mind, here are some
 common head scratchers and the best solutions I have found so far.
 
-##### How to Add a New Repository
+#### How to Add a New Repository
 
 These instructions have been revised now that I have worked out how to use shell
 scripts to make the job ridiculously easy.
