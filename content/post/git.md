@@ -82,7 +82,9 @@ name.
 
 #### <a name="gitadd">
 
-</a>How to create a script to update an existing Git repository
+</a>
+
+#### How to create a script to update an existing Git repository
 
 Follow these steps:
 
