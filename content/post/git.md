@@ -13,8 +13,8 @@ title: "Git"
 
 #### Index
 
-* [How to create a script to make a new Git repository][GitNew]
-* [How to create a script to update an existing Git repository][GitAdd]
+* [How to create a script to make a new Git repository]({{<ref "#gitnew" >}}) 
+* [How to create a script to update an existing Git repository]({{<ref "#gitadd" >}}) 
 
 #### Some sanity preserving tips on Linus' monstrous creation
 
