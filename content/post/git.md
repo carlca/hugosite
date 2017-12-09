@@ -49,8 +49,8 @@ Follow these steps:
     git commit -m "first commit" 
 
     # this command has been tweaked to make it entirely portable
-    gitname=$(git config github.user)
-    git remote add origin https://github.com/carlca/$folder.git 
+    gitname=`git config user.name`
+    git remote add origin https://github.com/$gitname/$folder.git 
 
     # the final push!
     git push -u origin master
