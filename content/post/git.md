@@ -80,11 +80,9 @@ name.
 * `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on
   whether you created an alias.
 
-#### <a name="gitadd">
+<a name="gitadd"></a>
 
-</a>
-
-#### How to create a script to update an existing Git repository
+### How to create a script to update an existing Git repository
 
 Follow these steps:
 
