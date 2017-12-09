@@ -30,13 +30,29 @@ Follow these steps:
 * [edit](https://code.visualstudio.com/) `/usr/local/bin/gitnew.sh` 
 
 ##### to contain...
-    #!/usr/bin/env bash folder=${PWD##\*/}\
-    rm -rf README.md echo "# $folder" >> README.md 
-    cp ~/.gitignore . 
+    #!/usr/bin/env bash 
+
+    # get the CWD and put it in $folder
+    folder=${PWD##\*/}\             
+
+    rm -rf README.md 
+
+    # create new README.md
+    echo "# $folder" >> README.md   
+    
+    # copy default .gitignore file from ~
+    cp ~/.gitignore .               
+
+    # instructions as per https://github.com/new
     git init 
     git add README.md 
     git commit -m "first commit" 
+
+    # this command has been tweaked to make it entirely portable
+    gitname=$(git config github.user)
     git remote add origin https://github.com/carlca/$folder.git 
+
+    # the final push!
     git push -u origin master
 
 * Optionallly, create an alias simply called gitnew by putting `alias
