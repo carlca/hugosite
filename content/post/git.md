@@ -25,9 +25,7 @@ seems to fail the oft overlooked
 more often than is strictly necessary. So, with this in mind, here are some
 common head scratchers and the best solutions I have found so far.
 
-#### <a name="gitnew">
-
-</a>How to create a script to make a new Git repository
+#### <a name="gitnew"></a>How to create a script to make a new Git repository
 
 These instructions have been revised now that I have worked out how to use shell
 scripts to make the job ridiculously easy.
@@ -80,9 +78,7 @@ name.
 * `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on
   whether you created an alias.
 
-<a name="gitadd"></a>
-
-### How to create a script to update an existing Git repository
+#### <a name="gitadd"></a>How to create a script to update an existing Git repository
 
 Follow these steps:
 
