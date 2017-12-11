@@ -9,3 +9,11 @@ body {
 .item-thumbnail {
   background-color: #c0d0ff;
 }
+
+#recent-post li .item-thumbnail .thumbnail {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
