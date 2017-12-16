@@ -42,9 +42,7 @@ Follow these steps:
     # get the CWD and put it in $folder  
     folder=${PWD##*/}
 
-    rm -rf README.md
-
-    # create new README.md
+    # create new, or add to existing, README.md
     echo "# $folder" >> README.md
 
     # copy default .gitignore file from ~
