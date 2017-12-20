@@ -15,6 +15,14 @@ title: "Git"
 
 * [How to create a script to make a new Git repository]({{<ref "#gitnew" >}})
 * [How to create a script to update an existing Git repository]({{<ref "#gitadd" >}})
+* [Oh shit, git!]({{<ref "#shitgit" >}})
+* [Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!]({{<ref "#shitmagic" >}})
+* [Oh shit, I committed and immediately realized I need to make one small change!]({{<ref "#shitsmall" >}})
+* [Oh shit, I need to change the message on my last commit!]({{<ref "#shitlast" >}})
+* [Oh shit, I accidentally committed something to master that should have been on a brand new branch!]({{<ref "#shitnew" >}})
+* [Oh shit, I accidentally committed to the wrong branch!]({{<ref "#shitwrong" >}})
+* [Oh shit, I tried to run a diff but nothing happened?!]({{<ref "#shitnothing" >}})
+* [Fuck this noise, I give up.]({{<ref "#shitfuck" >}})
 
 #### Some sanity preserving tips on Linus' monstrous creation
 
@@ -114,13 +122,13 @@ This makes the basic workflow for Git very easy...
 
 Some more Git related tips from ohshitgit.com...
 
-#### Oh shit, git!
+#### Oh shit, git! {#shitgit}
 
 Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where you can't search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem.
 
 So here are some bad situations I've gotten myself into, and how I eventually got myself out of them.
 
-#### Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+#### Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?! {#shitmagic}
 
     git reflog
     # you will see a list of every thing you've done in git, across all branches!
@@ -130,7 +138,7 @@ So here are some bad situations I've gotten myself into, and how I eventually go
     # magic time machine
     You can use this to get back stuff you accidentally deleted, or just to remove some stuff you tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked. I use reflog A LOT. Mega hat tip to the many many many many many people who suggested adding it!
 
-#### Oh shit, I committed and immediately realized I need to make one small change!
+#### Oh shit, I committed and immediately realized I need to make one small change! {#shitsmall}
 
     # make your change
     git add . # or add individual files
@@ -140,14 +148,14 @@ So here are some bad situations I've gotten myself into, and how I eventually go
 
 This usually happens to me if I commit, then run tests/linters... and FML, I didn't put a space after the equals sign. You could also make the change as a new commit and then do rebase -i in order to squash them both together, but this is about a million times faster.
 
-#### Oh shit, I need to change the message on my last commit!
+#### Oh shit, I need to change the message on my last commit! {#shitlast}
 
     git commit --amend
     # follow prompts to change the commit message
 
 Stupid commit message formatting requirements.
 
-#### Oh shit, I accidentally committed something to master that should have been on a brand new branch!
+#### Oh shit, I accidentally committed something to master that should have been on a brand new branch! {#shitnew}
 
     # create a new branch from the current state of master
     git branch some-new-branch-name
@@ -158,7 +166,7 @@ Stupid commit message formatting requirements.
 
 Note: this doesn't work if you've already pushed to origin, and if you tried other things first, you might need to git reset HEAD@{number} instead of HEAD~. Infinite sadness. Also, many many many people suggested an awesome way to make this shorter that I didn't know myself. Thank you all!
 
-#### Oh shit, I accidentally committed to the wrong branch!
+#### Oh shit, I accidentally committed to the wrong branch! {#shitwrong}
 
     # undo the last commit, but leave the changes available
     git reset HEAD~ --soft
@@ -179,13 +187,13 @@ A lot of people have suggested using cherry-pick for this situation too, so take
     git checkout master
     git reset HEAD~ --hard
 
-#### Oh shit, I tried to run a diff but nothing happened?!
+#### Oh shit, I tried to run a diff but nothing happened?! {#shitnothing}
 
     git diff --staged
 
 Git won't do a diff of files that have been add-ed to your staging area without this flag. File under ¯\_(ツ)\_/¯ (yes, this is a feature, not a bug, but it's baffling and non-obvious the first time it happens to you!)
 
-#### Fuck this noise, I give up.
+#### Fuck this noise, I give up. {#shitfuck}
 
     cd ..
     sudo rm -r fucking-git-repo-dir
