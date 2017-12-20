@@ -18,10 +18,10 @@ title: "Git"
 
 #### Some sanity preserving tips on Linus' monstrous creation
 
-There's no two ways about it, Git, to some of us at least, is a struggle. It seems to fail the oft 
+There's no two ways about it, Git, to some of us at least, is a struggle. It seems to fail the oft
 overlooked
 [Principle of Least Astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
-more often than is strictly necessary. So, with this in mind, here are some common head scratchers 
+more often than is strictly necessary. So, with this in mind, here are some common head scratchers
 and the best solutions I have found so far.
 
 #### How to create a script to make a new Git repository {#gitnew}
@@ -60,18 +60,18 @@ Follow these steps:
     # the final push!
     git push -u origin master
 
-* Optionally, create an alias simply called gitnew by putting `alias gitnew='gitnew.sh'` in your 
-shell config file
+* Optionally, create an alias simply called gitnew by putting `alias gitnew='gitnew.sh'` in your
+  shell config file
 
 #### How to use the script
 
-Before using the script, it is assumed that you have created a new working folder for your source 
+Before using the script, it is assumed that you have created a new working folder for your source
 code and that your Github repository will have the same name.
 
-* Create the repository in Github, but do not do any of the follow up steps described on 
-https://github.com/new. They are all done by the shell script.
-* `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on whether you created 
-an alias.
+* Create the repository in Github, but do not do any of the follow up steps described on
+  https://github.com/new. They are all done by the shell script.
+* `cd` to the working folder and type `gitnew` or `gitnew.sh` ⏎ depending on whether you created
+  an alias.
 
 #### How to create a script to update an existing Git repository {#gitadd}
 
@@ -98,10 +98,10 @@ Follow these steps:
 
 #### How to use the script
 
-* Make your code changes or create new files/folders using your favorite 
-[editor](https://code.visualstudio.com/).
-* Type `gitadd "<commit message>"` or `gitadd.sh "<commit message>"` ⏎ depending on whether you 
-created an alias.
+* Make your code changes or create new files/folders using your favorite
+  [editor](https://code.visualstudio.com/).
+* Type `gitadd "<commit message>"` or `gitadd.sh "<commit message>"` ⏎ depending on whether you
+  created an alias.
 
 #### Summary
 
@@ -111,4 +111,21 @@ This makes the basic workflow for Git very easy...
 * Type `gitnew` or `gitnew.sh` ⏎
 * Make code changes or create new files/folders
 * Type `gitadd "<commit message>"` or `gitadd.sh "<commit message>"` ⏎
-  
+
+Some more Git related tips from ohshitgit.com...
+
+### Oh shit, git!
+
+Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where you can't search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem.
+
+So here are some bad situations I've gotten myself into, and how I eventually got myself out of them \*.
+
+#### Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+
+```
+git reflog              # you will see a list of every thing you've done in git, across all branches!               # branches. each one has an index HEAD@{index}
+                        # find the one before you broke everything
+git reset HEAD@{index}  # magic time machine
+```
+
+You can use this to get back stuff you accidentally deleted, or just to remove some stuff you tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked. I use reflog A LOT. Mega hat tip to the many many many many many people who suggested adding it!
