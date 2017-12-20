@@ -114,7 +114,7 @@ This makes the basic workflow for Git very easy...
 
 Some more Git related tips from ohshitgit.com...
 
-### Oh shit, git!
+#### Oh shit, git!
 
 Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where you can't search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem.
 
@@ -122,8 +122,9 @@ So here are some bad situations I've gotten myself into, and how I eventually go
 
 #### Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
 
-    git reflog              # you will see a list of every thing you've done in git, across all                             # branches. each one has an index HEAD@{index}
-                            # find the one before you broke everything
-    git reset HEAD@{index}  # magic time machine
+    git reflog                  # you will see a list of every thing you've done in git, across all
+                                # branches. each one has an index HEAD@{index}
+                                # find the one before you broke everything
+    git reset HEAD@{index}      # magic time machine
 
 You can use this to get back stuff you accidentally deleted, or just to remove some stuff you tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked. I use reflog A LOT. Mega hat tip to the many many many many many people who suggested adding it!
