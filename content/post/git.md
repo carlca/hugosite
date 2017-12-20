@@ -117,4 +117,4 @@ Some more Git related tips from ohshitgit.com...
 
 #### Oh shit, git! {#shitgit}
 
-The wonderful Katie Sylor-Miller ([@ksylor]https://twitter.com/ksylor and [@ohshitgit]https://twitter.com/ohshitgit) has put together a marvellous site full of intelligence, insight, attitude and profanity. See it at ohshitgit.com
+The wonderful Katie Sylor-Miller [@ksylor](https://twitter.com/ksylor) and [@ohshitgit](https://twitter.com/ohshitgit) has put together a marvellous site full of intelligence, insight, attitude and profanity. See it at ohshitgit.com
