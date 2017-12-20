@@ -155,7 +155,7 @@ This usually happens to me if I commit, then run tests/linters... and FML, I did
 
 Stupid commit message formatting requirements.
 
-#### Oh shit, I accidentally committed something to master that should have been on a brand new branch! {#shitnew}
+#### Oh shit, I committed something to master that should have been on a brand new branch! {#shitnew}
 
     # create a new branch from the current state of master
     git branch some-new-branch-name
@@ -166,7 +166,7 @@ Stupid commit message formatting requirements.
 
 Note: this doesn't work if you've already pushed to origin, and if you tried other things first, you might need to git reset HEAD@{number} instead of HEAD~. Infinite sadness. Also, many many many people suggested an awesome way to make this shorter that I didn't know myself. Thank you all!
 
-#### Oh shit, I accidentally committed to the wrong branch! {#shitwrong}
+#### Oh shit, I committed to the wrong branch! {#shitwrong}
 
     # undo the last commit, but leave the changes available
     git reset HEAD~ --soft
