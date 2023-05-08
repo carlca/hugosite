@@ -1,5 +1,8 @@
-# Code of Conduct
-
+---
+title: "CODE_OF_CONDUCT"
+date: 2023-05-08T19:21:12+01:00
+draft: true
+---
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, I pledge to making participation in my project and my community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
@@ -44,3 +47,4 @@ This Code of Conduct is adapted from the [Contributor Covenant][homepage], versi
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
+

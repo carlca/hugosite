@@ -5,16 +5,6 @@
     <link>/categories/</link>
     <description>Recent content in Categories on carlca.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2017 12:18:17 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DevOps</title>
-      <link>/categories/devops/</link>
-      <pubDate>Fri, 08 Dec 2017 12:18:17 +0000</pubDate>
-      
-      <guid>/categories/devops/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
