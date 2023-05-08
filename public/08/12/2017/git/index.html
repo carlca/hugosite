@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Git // carlca.com</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="carl caulkett" />
+    <meta name="description" content="Some sanity preserving tips on Linus&#39; monstrous creation" />
+    <link rel="stylesheet" href="/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git"/>
+<meta name="twitter:description" content="Some sanity preserving tips on Linus&#39; monstrous creation"/>
+<meta name="twitter:site" content="@carlcaulkett"/>
+
+    <meta property="og:title" content="Git" />
+<meta property="og:description" content="Some sanity preserving tips on Linus&#39; monstrous creation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/08/12/2017/git/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2017-12-08T12:18:17+00:00" />
+<meta property="article:modified_time" content="2017-12-08T12:18:17+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/images/homer.png" alt="carl caulkett" /></a>
+      <span class="app-header-title">carlca.com</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Git</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 8, 2017
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="/tags/git/">git</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h4 id="index">Index</h4>
+<ul>
+<li><a href="#gitnew">How to create a script to make a new Git repository</a></li>
+<li><a href="#gitadd">How to create a script to update an existing Git repository</a></li>
+<li><a href="#shitgit">Oh shit, git!</a></li>
+</ul>
+<h4 id="some-sanity-preserving-tips-on-linus-monstrous-creation">Some sanity preserving tips on Linus&rsquo; monstrous creation</h4>
+<p>There&rsquo;s no two ways about it, Git, to some of us at least, is a struggle. It seems to fail the oft
+overlooked
+<a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">Principle of Least Astonishment</a>
+more often than is strictly necessary. So, with this in mind, here are some common head scratchers
+and the best solutions I have found so far.</p>
+<h4 id="prerequisites--assumptions">Prerequisites / Assumptions</h4>
+<ul>
+<li>I like to keep my own scripts in a new folder below my user folder <code>~bin</code> and make sure that it is included in my $PATH.</li>
+<li>As of macOS 10.15 Catalina, Zsh is supplied as the default shell in place of Bash.</li>
+</ul>
+<h4 id="gitnew">How to create a script to make a new Git repository</h4>
+<p>These instructions have been revised now that I have worked out how to use shell scripts to make the job ridiculously easy.</p>
+<p>Follow these steps:</p>
+<ul>
+<li>Create a default <code>.gitignore</code> file and place it in <code>~</code></li>
+<li><code>touch ~/bin/gitnew.sh</code></li>
+<li><code>chmod 755 ~/bin/gitnew.sh</code></li>
+<li><a href="https://code.visualstudio.com/">edit</a> <code>~/bin/gitnew.sh</code></li>
+</ul>
+<h5 id="to-contain">to contain&hellip;</h5>
+<pre><code>#!/usr/bin/env bash
+
+# get the CWD and put it in $folder  
+folder=${PWD##*/}
+
+# create new, or add to existing, README.md
+echo &quot;# $folder&quot; &gt;&gt; README.md
+
+# copy default .gitignore file from ~
+cp ~/.gitignore .
+
+# instructions as per https://github.com/new
+git init
+git add README.md
+git commit -m &quot;first commit&quot;
+
+# this command has been tweaked to make it entirely portable
+gitname=`git config user.name`
+git remote add origin https://github.com/$gitname/$folder.git
+
+# the final push!
+git push -u origin master
+</code></pre>
+<ul>
+<li>Optionally, create an alias simply called gitnew by putting <code>alias gitnew='gitnew.sh'</code> in your
+shell config file</li>
+</ul>
+<h4 id="how-to-use-the-script">How to use the script</h4>
+<p>Before using the script, it is assumed that you have created a new working folder for your source
+code and that your Github repository will have the same name.</p>
+<ul>
+<li>Create the repository in Github, but do not do any of the follow up steps described on
+<a href="https://github.com/new">https://github.com/new</a>. They are all done by the shell script.</li>
+<li><code>cd</code> to the working folder and type <code>gitnew</code> or <code>gitnew.sh</code> ⏎ depending on whether you created
+an alias.</li>
+</ul>
+<h4 id="gitadd">How to create a script to update an existing Git repository</h4>
+<p>Follow these steps:</p>
+<ul>
+<li><code>touch /usr/local/bin/gitadd.sh</code></li>
+<li><code>chmod 755 /usr/local/bin/gitadd.sh</code></li>
+<li><a href="https://code.visualstudio.com/">edit</a> <code>/usr/local/bin/gitadd.sh</code></li>
+</ul>
+<h5 id="to-contain-1">to contain&hellip;</h5>
+<pre><code>#!/usr/bin/env bash
+
+# update/add files recursively
+git add -A .
+
+# commit with user supplied message
+git commit -m &quot;$1&quot;
+
+# the final push!
+git push
+</code></pre>
+<ul>
+<li>Optionally, create an alias simply called gitadd by putting <code>alias gitadd='gitadd.sh'</code> in your shell config file.</li>
+</ul>
+<h4 id="how-to-use-the-script-1">How to use the script</h4>
+<ul>
+<li>Make your code changes or create new files/folders using your favorite
+<a href="https://code.visualstudio.com/">editor</a>.</li>
+<li>Type <code>gitadd &quot;&lt;commit message&gt;&quot;</code> or <code>gitadd.sh &quot;&lt;commit message&gt;&quot;</code> ⏎ depending on whether you
+created an alias.</li>
+</ul>
+<h4 id="summary">Summary</h4>
+<p>This makes the basic workflow for Git very easy&hellip;</p>
+<ul>
+<li>Create Git repository at <a href="https://github.com">https://github.com</a></li>
+<li>Type <code>gitnew</code> or <code>gitnew.sh</code> ⏎</li>
+<li>Make code changes or create new files/folders</li>
+<li>Type <code>gitadd &quot;&lt;commit message&gt;&quot;</code> or <code>gitadd.sh &quot;&lt;commit message&gt;&quot;</code> ⏎</li>
+</ul>
+<p>Some more Git related tips from ohshitgit.com&hellip;</p>
+<h4 id="shitgit">Oh shit, git!</h4>
+<p>The wonderful Katie Sylor-Miller <a href="https://twitter.com/ksylor">@ksylor</a> and <a href="https://twitter.com/ohshitgit">@ohshitgit</a> has put together a marvellous site full of intelligence, insight, attitude and profanity. See it at ohshitgit.com</p>
+
+    </div>
+    <div class="post-footer">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "carlca-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

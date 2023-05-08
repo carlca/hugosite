@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>carlca.com</title>
+    <link>/</link>
+    <description>Recent content on carlca.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Dec 2017 12:18:17 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>/08/12/2017/git/</link>
+      <pubDate>Fri, 08 Dec 2017 12:18:17 +0000</pubDate>
+      
+      <guid>/08/12/2017/git/</guid>
+      <description>Index How to create a script to make a new Git repository How to create a script to update an existing Git repository Oh shit, git! Some sanity preserving tips on Linus&amp;rsquo; monstrous creation There&amp;rsquo;s no two ways about it, Git, to some of us at least, is a struggle. It seems to fail the oft overlooked Principle of Least Astonishment more often than is strictly necessary. So, with this in mind, here are some common head scratchers and the best solutions I have found so far.</description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>/08/12/2017/markdown/</link>
+      <pubDate>Fri, 08 Dec 2017 12:18:17 +0000</pubDate>
+      
+      <guid>/08/12/2017/markdown/</guid>
+      <description>&lt;p&gt;This note demonstrates some of what &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; is capable of doing.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Feel free to play with this page. Unlike regular notes, this doesn&amp;rsquo;t
+automatically save itself.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My Second Post</title>
+      <link>/04/12/2017/my-second-post/</link>
+      <pubDate>Mon, 04 Dec 2017 15:28:26 +0000</pubDate>
+      
+      <guid>/04/12/2017/my-second-post/</guid>
+      <description>This is the second post.</description>
+    </item>
+    
+    <item>
+      <title>musician / gopher - definition of terms</title>
+      <link>/04/12/2017/musician-/-gopher-definition-of-terms/</link>
+      <pubDate>Mon, 04 Dec 2017 12:14:17 +0000</pubDate>
+      
+      <guid>/04/12/2017/musician-/-gopher-definition-of-terms/</guid>
+      <description>Musician </description>
+    </item>
+    
+  </channel>
+</rss>
